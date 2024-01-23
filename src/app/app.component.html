@@ -1,0 +1,48 @@
+<div *ngIf="isCustomerLoggedIn && isAdminLoggedIn">
+<mat-toolbar color="accent" class="navbar">
+  <!-- <span class="navbar-brand">E-Commerce</span> -->
+  <img src="assets/Logo.png" alt="Logo" class="logo">
+  <span class="spacer"></span>
+  <button mat-button routerLink="/order">Track order</button>
+  <button mat-button routerLink="/signup">Register</button>
+  <button mat-button routerLink="/login">Login</button>
+  <!-- Authentication -->
+</mat-toolbar>
+</div>
+
+<div *ngIf=" isAdminLoggedIn">
+  <mat-toolbar color="accent" class="navbar">
+    <!-- <span class="navbar-brand">E-Commerce</span> -->
+    <img src="assets/Logo.png" alt="Logo" class="logo">
+    <span class="spacer"></span>
+    <button mat-button routerLink="/admin/dashboard" routerLinkActive="active">Panel</button>
+    <button mat-button routerLink="/admin/analytcs" routerLinkActive="active">Analítica</button>
+    <button mat-button routerLink="/admin/category" routerLinkActive="active">Categoria</button>
+    <button mat-button routerLink="/admin/product" routerLinkActive="active">Producto</button>
+    <button mat-button routerLink="/admin/orders" routerLinkActive="active">Ordenes</button>
+    <button mat-button routerLink="/admin/post-coupon" routerLinkActive="active">Post Cupon</button>
+    <button mat-button routerLink="/admin/coupons" routerLinkActive="active">Cupones</button>
+    <button mat-button routerLinkActive="active" (click)="logout()">Cerrar Sesión</button>
+
+  </mat-toolbar>
+  </div>
+
+<div *ngIf="isCustomerLoggedIn">
+  <mat-toolbar color="accent" class="navbar">
+    <!-- <span class="navbar-brand">E-Commerce</span> -->
+    <img src="assets/Logo.png" alt="Logo" class="logo">
+    <span class="spacer"></span>
+    <button mat-button routerLink="/customer/dashboard" routerLinkActive="active">Panel</button>
+    <button mat-button routerLink="/customer/cart" routerLinkActive="active">Carrito</button>
+    <button mat-button routerLink="/customer/my_orders" routerLinkActive="active">Ordenes</button>
+    <button mat-button routerLink="/customer/my_wishlist" routerLinkActive="active">Lista de deseos</button>
+    <button mat-button routerLink="/customer/profile" routerLinkActive="active">Mi Cuenta</button>
+    <button mat-button routerLinkActive="active" (click)="logout()">Cerrar Sesión</button>
+
+    <!-- Authentication -->
+  </mat-toolbar>
+  </div>
+
+
+
+<router-outlet></router-outlet>

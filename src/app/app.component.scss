@@ -1,0 +1,35 @@
+.navbar-brand{
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 16px;
+  color: #1B5E20;
+}
+
+.spacer{
+  flex: 1;
+}
+
+button{
+  color: white;
+  text-transform: uppercase;
+  margin-left: 8px;
+}
+
+button.active{
+  font-weight: 600;
+}
+
+.custom-tollbar{
+  background-color: #ff0000;
+}
+
+.logo {
+  width: 110px; /* Tamaño de la imagen */
+  height: auto; /* Mantener la proporción */
+  margin-right: 10px; /* Ajustar el margen según sea necesario */
+}
+
+.spacer {
+  flex: 1; /* Espacio flexible para empujar los botones hacia la derecha */
+}
+
